@@ -1,0 +1,22 @@
+
+footer {
+    width: 100vw; // Ensures it takes the full viewport width
+    height: 209px;
+    background: #000000;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    color: white; // Ensure text is visible
+    text-align: center;
+  
+    position: relative;
+    flex-direction: column;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+  }
+  
