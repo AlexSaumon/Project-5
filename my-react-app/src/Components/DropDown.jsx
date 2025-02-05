@@ -1,4 +1,4 @@
-import '../Styles/Gallery.scss'
+import '../Styles/DropDown.scss'
 
 function DropDown() {
     return (
