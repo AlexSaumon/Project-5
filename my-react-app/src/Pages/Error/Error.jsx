@@ -4,28 +4,9 @@ import viteLogo from '/vite.svg'
 import '../../Styles/App.scss'
 import Header from '../../Components/Header'
 import Footer from '../../Components/Footer'
-import Banner from '../../Components/Banner'
-import DropDown from '../../Components/DropDown'
 import ErrorIMG from '../../assets/404.svg';
+import { NavLink } from 'react-router';
 
-const data = [
-  {
-    name: 'Fiabilité',
-    description: 'chat'
-  },
-  {
-    name: 'Respect',
-    description: 'chien'
-  },
-  {
-    name: 'Service',
-    description: 'cheval'
-  },
-  {
-    name: 'Sécurité',
-    description: 'cochon'
-  }
-];
 
 function Error() {
   return (
@@ -33,6 +14,8 @@ function Error() {
       <Header />
       <div>
             <img src={ErrorIMG} className='Error-img' alt="Banner picture" />
+            <p className='Big-msg'>Oups! La page que vous demandez n'existe pas</p>
+            <NavLink to="/" ><p className='Redirect'>Retourner sur la page d'acceuil</p></NavLink>
       </div>
       <Footer />
     </>

@@ -5,6 +5,21 @@
     flex-direction: column;
     gap: 50px;
     align-items: center;    
+    width: 1023px;
+}
+
+.DropDownContainer-Fiche {
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    .dropDown {
+        width: 582px;
+    }
 }
 
 .dropDown {
@@ -15,6 +30,7 @@
     padding: 0px;
     isolation: isolate;
     width: 1023px;
+    object-fit: cover;
     height: 52px;
     border-radius: 5px;
     color: white;

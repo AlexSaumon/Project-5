@@ -9,6 +9,8 @@ function Header() {
           <nav>
             <NavLink to="/" >Acceuil</NavLink>
             <NavLink to="/Apropos" >A propos</NavLink>
+            <NavLink to="/Error" >Test Error</NavLink>
+            <NavLink to="/Fiche" >Test Fiche</NavLink>
           </nav> 
       </header>
     );

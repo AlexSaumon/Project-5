@@ -5,6 +5,7 @@ import './index.scss'
 import App from './Pages/Home/App'
 import Apropos from './Pages/Apropos/Apropos'
 import Error from './Pages/Error/Error'
+import Fiche from './Pages/Fiche-Logement/Fiche-Logement'
 
 createRoot(document.getElementById('root')).render(
     <BrowserRouter>
@@ -12,6 +13,7 @@ createRoot(document.getElementById('root')).render(
           <Route path="/" element={<App />} />
           <Route path="/Apropos" element={<Apropos />} />
           <Route path="/Error" element={<Error />} />
+          <Route path="/Fiche" element={<Fiche />} />
         </Routes>
     </BrowserRouter>
 )

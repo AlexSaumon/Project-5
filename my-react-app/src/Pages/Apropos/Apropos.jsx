@@ -31,7 +31,7 @@ function Apropos() {
   return (
     <>
       <Header />
-      <div>
+      <div className='Main'>
       <Banner>
 				<img src={BannerIMG} className="IMG" alt="Banner picture" />
 			</Banner>
