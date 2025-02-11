@@ -6,6 +6,8 @@ import Header from '../../Components/Header'
 import Footer from '../../Components/Footer'
 import DropDown from '../../Components/DropDown'
 import Carousel from '../../Components/Carrousel'
+import Description from '../../Components/Description'
+import Tags from '../../Components/Tag'
 
 import logements from '../../Data/logements.json';
 
@@ -25,15 +27,17 @@ const selection = logements.filter(id =>
 );
 
 function Fiche() {
+  
   return (
     <>
       <Header />
       <div className='Main'>
           <div className="galleryContainer">
           {selection.map(item => <Carousel logement={item} key={item.id} />)}
+          
           </div>
-            <div><h2>Nom, Location Placeholder</h2></div>
-            <div><h3>Tag placeholder</h3></div>
+            <div> {selection.map(item => <Description logement={item} key={item.id} />)}</div>
+            <div>{selection.map(item => <Tags logement={item} key={item.id} />)}</div>
             <div className='DropDownContainer-Fiche'>
               {data.map((item, index) => (
                 <DropDown name={item.name} description={item.description} key={index} />
@@ -46,4 +50,3 @@ function Fiche() {
 }
 
 export default Fiche; 
-
