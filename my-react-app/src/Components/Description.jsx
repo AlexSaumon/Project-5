@@ -1,14 +1,14 @@
-import '../Styles/Gallery.scss';
+import '../Styles/Description.scss';
 
 function Description({ logement }) {
-  if (!logement || !logement.description || !logement.location) {
+  if (!logement || !logement.title || !logement.location) {
     return <p>No Descriptions available</p>;
   }
 
   return (
-    <div>
+    <div className='container'>
         <div className="description">
-            <p>{logement.description}</p>
+            <h3>{logement.title}</h3>
             <p>{logement.location}</p>
         </div>
         <div className='host'>

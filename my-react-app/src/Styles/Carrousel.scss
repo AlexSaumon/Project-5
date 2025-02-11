@@ -1,0 +1,53 @@
+.carrouselContainer {
+    display: flex;
+    width: 100%;
+    height: 415px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.carrousel {
+    display: flex;
+    border-radius: 20px;
+    background-color: aqua;
+    align-items: center;
+    overflow: hidden; // Prevents unwanted spacing
+    
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 20px;
+        margin-left: 0px;
+    }
+
+    button {
+        color: white;
+        background-color: transparent;
+        border: none;
+        width: 96px;
+        height: 119px;
+        font-size: 48px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2; // Ensures buttons are above the image
+    }
+
+    .prev {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
+}

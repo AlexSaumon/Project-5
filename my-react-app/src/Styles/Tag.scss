@@ -1,0 +1,39 @@
+.tag-parent {
+    width: 100%; 
+}
+.tag-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 30px;
+}
+
+.tag {
+    width: 115px;
+    height: 25px;
+    background-color: #FF6060;
+    color: white;
+    border-radius: 10px;
+}
+
+/* Tags
+
+position: absolute;
+width: 365px;
+height: 25px;
+left: 100px;
+top: 705px;
+
+
+
+box-sizing: border-box;
+
+position: absolute;
+width: 115px;
+height: 25px;
+left: 100px;
+top: 705px;
+
+ */

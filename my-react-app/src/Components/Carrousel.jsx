@@ -1,4 +1,4 @@
-import '../Styles/Gallery.scss'
+import '../Styles/Carrousel.scss'
 
 import { useState } from 'react';
 
@@ -21,10 +21,10 @@ function Carousel({ logement }) {
   };
 
   return (
-    <div className="carousel">
-      <button onClick={prevSlide}>❮</button>
+    <div className="carrousel">
+      <button className='prev' onClick={prevSlide}>❮</button>
       <img src={logement.pictures[currentIndex]} alt={`Slide ${currentIndex}`} />
-      <button onClick={nextSlide}>❯</button>
+      <button className='next' onClick={nextSlide}>❯</button>
     </div>
   );
 }

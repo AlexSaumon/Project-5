@@ -32,12 +32,12 @@ function Fiche() {
     <>
       <Header />
       <div className='Main'>
-          <div className="galleryContainer">
+          <div className="carrouselContainer">
           {selection.map(item => <Carousel logement={item} key={item.id} />)}
           
           </div>
-            <div> {selection.map(item => <Description logement={item} key={item.id} />)}</div>
-            <div>{selection.map(item => <Tags logement={item} key={item.id} />)}</div>
+            <div className='description-parent'> {selection.map(item => <Description logement={item} key={item.id} />)}</div>
+            <div className='tag-parent'>{selection.map(item => <Tags logement={item} key={item.id} />)}</div>
             <div className='DropDownContainer-Fiche'>
               {data.map((item, index) => (
                 <DropDown name={item.name} description={item.description} key={index} />
