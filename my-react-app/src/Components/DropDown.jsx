@@ -1,14 +1,27 @@
-import '../Styles/DropDown.scss'
+import { useState } from 'react';
+import '../Styles/DropDown.scss';
+import arrowdown from '../assets/arrowdown.svg';
+import arrowup from '../assets/arrowup.svg';
 
-function DropDown() {
+function DropDown({ name, description }) {
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
-        <div className='DropDownContainer'>
-                <div className='Test-DropDown'>1</div>
-                <div className='Test-DropDown'>2</div>
-                <div className='Test-DropDown'>3</div>
-                <div className='Test-DropDown'>4</div>
+        <div >
+            <details
+                onToggle={(e) => setIsOpen(e.target.open)} // Detect open/close
+                open={isOpen}
+            >
+                <summary className="dropDown">
+                    <h3>{name}</h3>
+                    {isOpen ? <img src={arrowdown} className="IMG" alt="Banner picture" /> : <img src={arrowup} className="IMG" alt="Banner picture" />} {/* Toggles between ▲ and ▼ */}
+                </summary>
+                <div className="dropDown-descripton">
+                    <p>{description}</p>
+                </div>
+            </details>
         </div>
     );
-  }
-  
-  export default DropDown;
+}
+
+export default DropDown;

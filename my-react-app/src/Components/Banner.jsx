@@ -1,12 +1,9 @@
 import '../Styles/Banner.scss';
-import BannerIMG from '../assets/BannerIMG.svg';
 
-function Header() {
+
+function Header({children}) {
     return (
-      <div className='BannerContainer'>
-        <img src={BannerIMG} className="IMG" alt="Banner picture" />
-        <h1>Chez vous, partout et ailleurs</h1>
-      </div>
+      <div className='BannerContainer'>{children} </div>
     );
 }
 

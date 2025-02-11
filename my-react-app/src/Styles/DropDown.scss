@@ -1,33 +1,38 @@
 .DropDownContainer {
     display: flex;
     margin-top: 50px;
+    margin-bottom: 50px;
     flex-direction: column;
     gap: 50px;
-    align-items: center;
+    align-items: center;    
 }
 
-.Test-DropDown {
+.dropDown {
     display: flex;
     background-color: #FF6060;
-    /* .dropdown-open */
-
-    /* Auto layout */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
     padding: 0px;
     isolation: isolate;
-
     width: 1023px;
     height: 52px;
-
     border-radius: 5px;
-
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-
     color: white;
+    justify-content: space-between;
 
+}
+
+.dropDown h3, img {
+    margin: 10px;
+}
+
+.dropDown-descripton {
+    display: flex;
+    background: rgba(247, 247, 247, 0.45);
+    border-radius: 0px 0px 5px 5px;
+    margin-top: -5px; 
+}
+
+.dropDown-descripton p {
+    margin: 10px;
 }

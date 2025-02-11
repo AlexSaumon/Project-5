@@ -2,7 +2,6 @@
 .galleryContainer {
     display: flex;
     background-color: #F6F6F6;
-    height: 829px;
     left: 100px;
     top: 429px;
     margin-top: 50px;
@@ -12,15 +11,40 @@
     border-radius: 25px;
 }
 
-.Test-Gallery {
+.gallery {
     display: flex;
+    position: relative;
     justify-content: space-evenly;
     align-content: space-around;
     width: 340px;
     height: 340px;
-    background-color: #FF6060;
+    background-color: rgb(255, 96, 96);
     border-radius: 10px;
     color: white;
     margin: 40px;
+    overflow: hidden;
 }
 
+.gallery img {
+    display: flex;
+    object-fit: cover;
+    z-index: 1; // Ensure it's below the text
+}
+
+.gallery p {
+    position: absolute;
+    left: 0%;
+    width: 50%;
+    bottom: 0;
+    margin-bottom: 0;
+    background: rgba(255, 96, 96, 0.6); // Semi-transparent black background
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: left;
+    z-index: 2; // Ensure it's above the image
+    width: 50%; // Keeps text within the card
+    color: white;
+    font-family: Monserrat;
+  }

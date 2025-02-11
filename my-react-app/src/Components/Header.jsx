@@ -1,14 +1,15 @@
 import '../Styles/Header.scss';
 import kasaLogo from '../assets/Logo.svg';
+import { NavLink } from 'react-router';
 
 function Header() {
     return (
       <header>
-        <img src={kasaLogo} className="LOGO" alt="Kasa logo" />
-        <nav>
-          <a href="/" className="Acceuil">Acceuil</a>
-          <a href="/Apropos" className="APropos">A propos</a>
-        </nav>
+          <img src={kasaLogo} className="LOGO" alt="Kasa logo" />
+          <nav>
+            <NavLink to="/" >Acceuil</NavLink>
+            <NavLink to="/Apropos" >A propos</NavLink>
+          </nav> 
       </header>
     );
 }
