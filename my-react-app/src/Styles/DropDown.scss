@@ -14,10 +14,17 @@
     margin-bottom: 50px;
     flex-direction: row;
     gap: 50px;
-    align-items: center;
-    justify-content: center;
     width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
     .dropDown {
+        width: 582px;
+    }
+    .dropDown-descripton {
+        display: flex;
+        background: rgba(247, 247, 247, 0.45);
+        border-radius: 0px 0px 5px 5px;
+        margin-top: -5px; 
         width: 582px;
     }
 }
@@ -47,8 +54,10 @@
     background: rgba(247, 247, 247, 0.45);
     border-radius: 0px 0px 5px 5px;
     margin-top: -5px; 
+    
 }
 
 .dropDown-descripton p {
     margin: 10px;
+    text-align: left;
 }

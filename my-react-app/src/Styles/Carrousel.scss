@@ -43,6 +43,10 @@
         z-index: 2; // Ensures buttons are above the image
     }
 
+    button:focus, button:focus-visible {
+        outline: none;
+    }
+
     .prev {
         left: 10px;
     }

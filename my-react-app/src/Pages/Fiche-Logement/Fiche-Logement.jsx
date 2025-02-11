@@ -11,21 +11,28 @@ import Tags from '../../Components/Tag'
 
 import logements from '../../Data/logements.json';
 
-const data = [
-  {
-    name: 'Description',
-    description: 'chat'
-  },
-  {
-    name: 'Equipements',
-    description: 'chien'
-  },
-];
-
 const selection = logements.filter(id =>
   id.id === 'c67ab8a7'
 );
 
+const selectedLogement = selection[0]; 
+
+const data = [
+  {
+    name: 'Description',
+    description: selectedLogement.description, 
+  },
+  {
+    name: 'Équipements',
+    description: (
+      <ul className="equipments-list">
+        {selectedLogement.equipments.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+    ),
+  },
+];
 function Fiche() {
   
   return (

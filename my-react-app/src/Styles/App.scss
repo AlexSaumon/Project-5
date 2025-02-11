@@ -48,6 +48,17 @@
   margin-bottom: 100px;
 }
 
+.equipments-list {
+  list-style-type: none; 
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px; 
+  align-items: flex-start;
+}
+
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
