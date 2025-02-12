@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Route, Routes } from 'react-router'
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router'
 import './index.scss'
 import App from './Pages/Home/App'
 import Apropos from './Pages/Apropos/Apropos'
@@ -16,6 +16,7 @@ createRoot(document.getElementById('root')).render(
           <Route path="/Error" element={<Error />} />
           <Route path="/Fiche" element={<Fiche />} /> // page de test
           <Route path="/logement/:id" element={<Logement/>} />
+          <Route path="*" element={<Navigate to="/Error" replace />} />
         </Routes>
     </BrowserRouter>
 )
