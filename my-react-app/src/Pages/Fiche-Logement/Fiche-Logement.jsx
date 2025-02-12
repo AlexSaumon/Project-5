@@ -1,3 +1,5 @@
+/** Page de test pour la création des fiches de logement */
+
 import { useState } from 'react'
 import BannerIMG from '../../assets/BannerIMG2.png'
 import viteLogo from '/vite.svg'
@@ -8,6 +10,8 @@ import DropDown from '../../Components/DropDown'
 import Carousel from '../../Components/Carrousel'
 import Description from '../../Components/Description'
 import Tags from '../../Components/Tag'
+import Rating from '../../Components/Rating'
+
 
 import logements from '../../Data/logements.json';
 
@@ -44,7 +48,8 @@ function Fiche() {
           
           </div>
             <div className='description-parent'> {selection.map(item => <Description logement={item} key={item.id} />)}</div>
-            <div className='tag-parent'>{selection.map(item => <Tags logement={item} key={item.id} />)}</div>
+            <div className='tag-parent'>{selection.map(item => <Tags logement={item} key={item.id} />)}<Rating logement={selectedLogement} /></div>
+            
             <div className='DropDownContainer-Fiche'>
               {data.map((item, index) => (
                 <DropDown name={item.name} description={item.description} key={index} />

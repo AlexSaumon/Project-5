@@ -1,5 +1,6 @@
 .tag-parent {
     width: 100%; 
+    display: flex;
 }
 .tag-container {
     display: flex;
@@ -16,6 +17,10 @@
     background-color: #FF6060;
     color: white;
     border-radius: 10px;
+}
+
+.rating {
+    min-width: fit-content;
 }
 
 /* Tags

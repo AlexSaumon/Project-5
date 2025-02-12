@@ -6,6 +6,8 @@ import DropDown from '../../Components/DropDown';
 import Carousel from '../../Components/Carrousel';
 import Description from '../../Components/Description';
 import Tags from '../../Components/Tag';
+import Rating from '../../Components/Rating'
+import '../../Styles/App.scss'
 
 function Fiche() {
   const { id } = useParams(); 
@@ -44,6 +46,7 @@ function Fiche() {
         </div>
         <div className='tag-parent'>
           <Tags logement={selectedLogement} />
+          <Rating logement={selectedLogement} />
         </div>
         <div className='DropDownContainer-Fiche'>
           {data.map((item, index) => (

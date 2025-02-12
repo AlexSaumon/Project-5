@@ -22,9 +22,13 @@ function Carousel({ logement }) {
 
   return (
     <div className="carrousel">
-      <button className='prev' onClick={prevSlide}>❮</button>
+      {logement.pictures.length > 1 && (
+        <button className='prev' onClick={prevSlide}>❮</button>
+      )}
       <img src={logement.pictures[currentIndex]} alt={`Slide ${currentIndex}`} />
-      <button className='next' onClick={nextSlide}>❯</button>
+      {logement.pictures.length > 1 && (
+        <button className='next' onClick={nextSlide}>❯</button>
+      )}
     </div>
   );
 }

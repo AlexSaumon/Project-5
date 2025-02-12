@@ -10,24 +10,11 @@ import kasaLogo from '../../assets/Logo.svg';
 
 import logements from '../../Data/logements.json';
 
-const dataTest = [
-  {
-    name: 'test',
-  },
-  {
-    name: 'toto',
-
-  },
-  {
-    name: 'titi',
-  }
-]
-
 function App() {
   return (
     <>
       <Header />
-      <div>
+      <div className='Main'>
       <Banner>
 				<img src={BannerIMG} className="IMG" alt="Banner picture" />
         <h1>Chez vous, partout et ailleurs</h1>

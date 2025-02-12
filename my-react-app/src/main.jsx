@@ -14,7 +14,7 @@ createRoot(document.getElementById('root')).render(
           <Route path="/" element={<App />} />
           <Route path="/Apropos" element={<Apropos />} />
           <Route path="/Error" element={<Error />} />
-          <Route path="/Fiche" element={<Fiche />} />
+          <Route path="/Fiche" element={<Fiche />} /> // page de test
           <Route path="/logement/:id" element={<Logement/>} />
         </Routes>
     </BrowserRouter>
