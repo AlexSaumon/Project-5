@@ -5,10 +5,12 @@ import { useState } from 'react';
 function Carousel({ logement }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Ensure logement.pictures exists before mapping
+  // vérifications si il y a des images
   if (!logement || !logement.pictures || logement.pictures.length === 0) {
     return <p>No pictures available</p>;
   }
+
+// gestions du défilement
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % logement.pictures.length);
@@ -19,7 +21,7 @@ function Carousel({ logement }) {
       prevIndex === 0 ? logement.pictures.length - 1 : prevIndex - 1
     );
   };
-
+/** Les flèches n'apparaisse que si il y plus de 1 images */
   return (
     <div className="carrousel">
       {logement.pictures.length > 1 && (

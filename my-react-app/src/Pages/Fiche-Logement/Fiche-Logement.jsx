@@ -15,11 +15,15 @@ import Rating from '../../Components/Rating'
 
 import logements from '../../Data/logements.json';
 
+/** filtre basique de l'ID */
+
 const selection = logements.filter(id =>
   id.id === 'c67ab8a7'
 );
 
 const selectedLogement = selection[0]; 
+
+/** generation des descriptions */
 
 const data = [
   {

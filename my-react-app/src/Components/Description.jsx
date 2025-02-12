@@ -1,5 +1,7 @@
 import '../Styles/Description.scss';
 
+  // vérifications si il y a des descriptions
+
 function Description({ logement }) {
   if (!logement || !logement.title || !logement.location) {
     return <p>No Descriptions available</p>;

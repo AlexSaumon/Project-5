@@ -10,7 +10,7 @@ import Rating from '../../Components/Rating'
 import '../../Styles/App.scss'
 
 function Fiche() {
-  const { id } = useParams(); 
+  const { id } = useParams(); // récupère l'id de l'url
   const selectedLogement = logements.find(logement => logement.id === id);
 
   if (!selectedLogement) {
@@ -18,6 +18,7 @@ function Fiche() {
   }
 
   const data = [
+    /** generation des descriptions */
     {
       name: 'Description',
       description: <p>{selectedLogement.description}</p>

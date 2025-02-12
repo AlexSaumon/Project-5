@@ -9,12 +9,12 @@ function DropDown({ name, description }) {
     return (
         <div >
             <details
-                onToggle={(e) => setIsOpen(e.target.open)} // Detect open/close
+                onToggle={(e) => setIsOpen(e.target.open)} // Detection ouverture fermeture
                 open={isOpen}
             >
                 <summary className="dropDown">
                     <h3>{name}</h3>
-                    {isOpen ? <img src={arrowdown} className="IMG" alt="Banner picture" /> : <img src={arrowup} className="IMG" alt="Banner picture" />} {/* Toggles between ▲ and ▼ */}
+                    {isOpen ? <img src={arrowdown} className="IMG" alt="Banner picture" /> : <img src={arrowup} className="IMG" alt="Banner picture" />} {/* swap entre ▲ et ▼ */}
                 </summary>
                 <div className="dropDown-descripton">
                     {description}
