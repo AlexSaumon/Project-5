@@ -20,14 +20,14 @@ function Fiche() {
   const data = [
     {
       name: 'Description',
-      description: selectedLogement.description,
+      description: <p>{selectedLogement.description}</p>
     },
     {
       name: 'Équipements',
       description: (
         <ul className="equipments-list">
           {selectedLogement.equipments.map((item, index) => (
-            <li key={index}>{item}</li>
+            <li key={index}><p>{item}</p></li>
           ))}
         </ul>
       ),

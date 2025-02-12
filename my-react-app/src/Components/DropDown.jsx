@@ -17,7 +17,7 @@ function DropDown({ name, description }) {
                     {isOpen ? <img src={arrowdown} className="IMG" alt="Banner picture" /> : <img src={arrowup} className="IMG" alt="Banner picture" />} {/* Toggles between ▲ and ▼ */}
                 </summary>
                 <div className="dropDown-descripton">
-                    <p>{description}</p>
+                    {description}
                 </div>
             </details>
         </div>
