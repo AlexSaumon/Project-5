@@ -9,7 +9,6 @@
 .carrousel {
     display: flex;
     border-radius: 20px;
-    background-color: aqua;
     align-items: center;
     overflow: hidden; // Prevents unwanted spacing
     
@@ -40,7 +39,7 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        z-index: 2; // Ensures buttons are above the image
+        z-index: 2; 
     }
 
     button:focus, button:focus-visible {
@@ -66,4 +65,79 @@
     justify-self: anchor-center;
     font-size: 18px;
     font-weight: 500;
+  }
+
+  h1 {
+    position: relative; 
+    color: #fff; 
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 2; 
+  }
+
+  @media all and (max-width: 775px) {
+
+    .carrouselContainer {
+        display: flex;
+        width: 100%;
+        height: 255px;
+        position: relative;
+        margin-bottom: 20px;
+    }
+    .carrousel {
+
+        
+    
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 20px;
+            margin-left: 0px;
+        }
+    
+        button {
+            color: white;
+            background-color: transparent;
+            width: 0px;
+            height: 0px;
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2; 
+        }
+    
+        button:focus, button:focus-visible {
+            outline: none;
+        }
+    
+        .prev {
+            left: 0px;
+        }
+    
+        .next {
+            right: 0px;
+        }
+    }
+    .image-counter {
+        position: absolute;
+        bottom: 10px;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 12px;
+        justify-self: anchor-center;
+        font-size: 18px;
+        font-weight: 500;
+      }
   }

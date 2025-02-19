@@ -61,3 +61,36 @@
     margin: 10px;
     text-align: left;
 }
+
+@media all and (max-width: 775px) {
+    .DropDownContainer {
+        display: flex;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+
+    .DropDownContainer .dropDown {
+        width: 100%;
+    }
+
+    .DropDownContainer-Fiche {
+        display: flex;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        flex-direction: column;
+        gap: 50px;
+        width: 100%;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+
+    .DropDownContainer-Fiche .dropDown {
+        width: 100%;
+    }
+
+  }

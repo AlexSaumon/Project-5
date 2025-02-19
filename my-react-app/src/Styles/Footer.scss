@@ -19,3 +19,13 @@ footer {
     left: 0;
 
   }
+
+  @media all and (max-width: 775px) {
+
+    footer {
+      h2 {
+        font-size: 12px;
+      }
+    }
+    
+  }
