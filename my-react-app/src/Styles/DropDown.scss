@@ -20,13 +20,16 @@
     .dropDown {
         width: 582px;
     }
+
     .dropDown-descripton {
         display: flex;
         background: rgba(247, 247, 247, 0.45);
         border-radius: 0px 0px 5px 5px;
         margin-top: -5px; 
-        width: 582px;
+        text-align: start;
+        padding: 5px;
     }
+    
 }
 
 .dropDown {
@@ -54,7 +57,7 @@
     background: rgba(247, 247, 247, 0.45);
     border-radius: 0px 0px 5px 5px;
     margin-top: -5px; 
-    
+    text-align: start;
 }
 
 .dropDown-descripton p {
@@ -72,10 +75,17 @@
         width: 100%;
         align-items: stretch;
         justify-content: space-between;
+        .dropDown-descripton {
+            font-size: 13px;
+        }
     }
 
     .DropDownContainer .dropDown {
         width: 100%;
+
+        h3 {
+            font-size: 13px;
+        }
     }
 
     .DropDownContainer-Fiche {
@@ -87,10 +97,16 @@
         width: 100%;
         align-items: stretch;
         justify-content: space-between;
+        .dropDown-descripton {
+            font-size: 13px;
+        }
     }
 
     .DropDownContainer-Fiche .dropDown {
         width: 100%;
+        h3 {
+            font-size: 13px;
+        }
     }
 
   }

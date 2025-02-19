@@ -6,11 +6,10 @@ function Tags({ logement }) {
   }
 
   return (
-    <div className='tag-container'>
-      {logement.tags.map((tag, index) => (
-        <p className='tag' key={index}>{tag}</p>
-      ))}
-    </div>
+    <div className='host'>
+            <p>{logement.host.name}</p>
+            <img src={logement.host.picture} className="avatar" alt="avatar" />
+        </div>
   );
 }
 

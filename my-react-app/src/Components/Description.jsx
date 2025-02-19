@@ -12,11 +12,14 @@ function Description({ logement }) {
         <div className="description">
             <h3>{logement.title}</h3>
             <p>{logement.location}</p>
+            
         </div>
-        <div className='host'>
-            <p>{logement.host.name}</p>
-            <img src={logement.host.picture} className="avatar" alt="avatar" />
-        </div>
+        <div className='tag-container'>
+        {logement.tags.map((tag, index) => (
+        <p className='tag' key={index}>{tag}</p>
+      ))}
+    </div>
+        
     </div>
   );
 }

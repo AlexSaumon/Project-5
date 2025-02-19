@@ -51,12 +51,14 @@ function Fiche() {
           {selection.map(item => <Carousel logement={item} key={item.id} />)}
           
           </div>
-            <div className='description-parent'>
-               {selection.map(item => <Description logement={item} key={item.id} />)}
-            </div>
-            <div className='tag-parent'>
-              {selection.map(item => <Tags logement={item} key={item.id} />)}<Rating logement={selectedLogement} />
+            <div className='description-container'>
+              <div className='description-parent'>
+                {selection.map(item => <Description logement={item} key={item.id} />)}
               </div>
+              <div className='tag-parent'>
+                {selection.map(item => <Tags logement={item} key={item.id} />)}<Rating logement={selectedLogement} />
+                </div>
+            </div>
             <div className='DropDownContainer-Fiche'>
               {data.map((item, index) => (
                 <DropDown name={item.name} description={item.description} key={index} />

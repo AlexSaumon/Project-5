@@ -60,6 +60,13 @@
   margin: 0;
 }
 
+.description-container{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+
 @media all and (max-width: 775px) {
   .Error-img{
     margin: 0px;
@@ -78,6 +85,11 @@
   .Redirect {
     font-size: 16px;
     margin-top: 70px;
+  }
+
+  .description-container{
+    display: flex;
+    flex-direction: column;
   }
 
 }
