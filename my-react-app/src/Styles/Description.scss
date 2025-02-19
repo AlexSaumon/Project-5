@@ -21,6 +21,7 @@
         font-weight: 500;
         font-size: 36px;
         margin: 0px;
+        text-align: start;
       }
     p{
         font-style: 500;
@@ -47,6 +48,16 @@
 }
 
 @media all and (max-width: 775px) {
+
+
+    .description {
+        h3 {
+        font-size: 18px;
+        }
+        p{
+            font-size: 12px;
+        }
+    }
     .host {
         display: flex;
         flex-direction: row;
@@ -56,6 +67,10 @@
         img {
             width: 32px;
             height: 32px;
+        }
+
+        h3 {
+            font-size: 18px;
         }
     
         p {

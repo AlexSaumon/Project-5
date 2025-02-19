@@ -42,12 +42,14 @@ function Fiche() {
         <div className="carrouselContainer">
           <Carousel logement={selectedLogement} />
         </div>
-        <div className='description-parent'>
-          <Description logement={selectedLogement} />
-        </div>
-        <div className='tag-parent'>
-          <Tags logement={selectedLogement} />
-          <Rating logement={selectedLogement} />
+        <div className='description-container'>
+          <div className='description-parent'>
+            <Description logement={selectedLogement} />
+          </div>
+          <div className='tag-parent'>
+            <Tags logement={selectedLogement} />
+            <Rating logement={selectedLogement} />
+          </div>
         </div>
         <div className='DropDownContainer-Fiche'>
           {data.map((item, index) => (
