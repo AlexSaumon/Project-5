@@ -9,7 +9,7 @@ function DropDown({ name, description }) {
     return (
         <div >
             <details
-                onToggle={(e) => setIsOpen(e.target.open)} // Detection ouverture fermeture
+                onToggle={(e) => setIsOpen(e.target.open)} // Detection ouverture fermeture; à enlever
                 open={isOpen}
             >
                 <summary className="dropDown">

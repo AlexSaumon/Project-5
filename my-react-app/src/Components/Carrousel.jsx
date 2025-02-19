@@ -13,7 +13,7 @@ function Carousel({ logement }) {
 // gestions du défilement
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % logement.pictures.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % logement.pictures.length); // modulo qui renvoit l'index à 0 si index = .lenght
   };
 
   const prevSlide = () => {
@@ -28,6 +28,11 @@ function Carousel({ logement }) {
         <button className='prev' onClick={prevSlide}>❮</button>
       )}
       <img src={logement.pictures[currentIndex]} alt={`Slide ${currentIndex}`} />
+      {logement.pictures.length > 1 && (
+        <div className="image-counter">
+          {currentIndex + 1} / {logement.pictures.length}
+        </div>
+      )}
       {logement.pictures.length > 1 && (
         <button className='next' onClick={nextSlide}>❯</button>
       )}
