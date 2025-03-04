@@ -7,13 +7,13 @@ function DropDown({ name, description }) {
     const [isOpen, setIsOpen] = useState(false);
     const contentRef = useRef(null);
 
-    // Toggle dropdown and animate height
+    
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
         if (!isOpen) {
-            contentRef.current.style.maxHeight = `${contentRef.current.scrollHeight}px`; // Expand
+            contentRef.current.style.maxHeight = `${contentRef.current.scrollHeight}px`; 
         } else {
-            contentRef.current.style.maxHeight = "0px"; // Collapse
+            contentRef.current.style.maxHeight = "0px"; 
         }
     };
 
