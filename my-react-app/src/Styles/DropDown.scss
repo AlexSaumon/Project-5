@@ -1,123 +1,127 @@
+
 .DropDownContainer {
     display: flex;
-    margin-top: 50px;
-    margin-bottom: 50px;
     flex-direction: column;
-    gap: 50px;
-    align-items: center;    
+    align-items: center;
     width: 1023px;
+    margin: 50px 0;
+    gap: 50px;
+    .dropDown {
+        width: 1023px;
+    }
+
+    .dropDown-description {
+        width: 1023px;
+        display: flex;
+        background: rgba(247, 247, 247, 0.45);
+        border-radius: 0 0 5px 5px;
+        text-align: start;
+        padding: 0;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+    }
 }
+
 
 .DropDownContainer-Fiche {
     display: flex;
-    margin-top: 50px;
-    margin-bottom: 50px;
     flex-direction: row;
-    gap: 50px;
-    width: 100%;
     align-items: flex-start;
     justify-content: space-between;
+    width: 100%;
+    margin: 50px 0;
+
     .dropDown {
         width: 582px;
     }
 
-    .dropDown-descripton {
+    .dropDown-description {
+        width: 582px;
         display: flex;
         background: rgba(247, 247, 247, 0.45);
-        border-radius: 0px 0px 5px 5px;
-        margin-top: -5px; 
+        border-radius: 0 0 5px 5px;
         text-align: start;
-        padding: 5px;
+        padding: 0;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
     }
-    
 }
+
 
 .dropDown {
     display: flex;
-    background-color: #FF6060;
     flex-direction: row;
     align-items: center;
-    padding: 0px;
-    isolation: isolate;
-    width: 1023px;
-    object-fit: cover;
+    justify-content: space-between;
+    background-color: #FF6060;
     height: 52px;
     border-radius: 5px;
     color: white;
-    justify-content: space-between;
+    padding: 0;
+    isolation: isolate;
+    object-fit: cover;
+    cursor: pointer;
+    transition: background 0.3s ease;
 
+
+    h3, img {
+        margin: 10px;
+    }
 }
 
-.dropDown h3, img {
-    margin: 10px;
+
+.dropDown-description {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+    transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+    p {
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
 }
 
-.dropDown-descripton {
-    display: flex;
-    background: rgba(247, 247, 247, 0.45);
-    border-radius: 0px 0px 5px 5px;
-    margin-top: -5px; 
-    text-align: start;
+
+.dropDown-description.open {
+    max-height: 500px; 
+    opacity: 1;
+    padding: 0px;
 }
 
-.dropDown-descripton p {
-    margin: 10px;
-    text-align: left;
-}
 
 @media all and (max-width: 1024px) {
-    .DropDownContainer {
-        display: flex;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        flex-direction: column;
-        gap: 20px;
-        width: 100%;
-        align-items: stretch;
-        justify-content: space-between;
-        .dropDown-descripton {
-            font-size: 13px;
-        }
-    }
-
-    .DropDownContainer .dropDown {
-        width: 100%;
-        height: 30px;
-
-        h3 {
-            font-size: 13px;
-        }
-
-        img {
-            width: 16px;
-            height: 16px;
-        }
-    }
-
+    .DropDownContainer,
     .DropDownContainer-Fiche {
         display: flex;
-        margin-top: 50px;
-        margin-bottom: 50px;
         flex-direction: column;
-        gap: 50px;
-        width: 100%;
         align-items: stretch;
         justify-content: space-between;
-        .dropDown-descripton {
+        width: 100%;
+        margin: 20px 0;
+        gap: 20px;
+
+        .dropDown-description {
             font-size: 13px;
         }
     }
 
+    .DropDownContainer .dropDown,
     .DropDownContainer-Fiche .dropDown {
         width: 100%;
         height: 30px;
+
         h3 {
             font-size: 13px;
         }
+
         img {
             width: 16px;
             height: 16px;
         }
     }
-
-  }
+}
