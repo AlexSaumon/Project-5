@@ -24,6 +24,14 @@
     }
 }
 
+button:focus, button:focus-visible {
+    outline: none; 
+}
+
+button:hover {
+    border-color: #FF6060;
+}
+
 
 .DropDownContainer-Fiche {
     display: flex;
@@ -48,6 +56,7 @@
         opacity: 0;
         overflow: hidden;
         transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+        
     }
 }
 
@@ -75,14 +84,13 @@
 
 
 .dropDown-description {
-    max-height: 0;
     opacity: 0;
     overflow: hidden;
     padding: 0;
     transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+    
     p {
-        margin-left: 10px;
-        margin-bottom: 10px;
+        margin: 20px;
     }
 }
 
@@ -91,6 +99,7 @@
     max-height: 500px; 
     opacity: 1;
     padding: 0px;
+    align-items: center;
 }
 
 
@@ -107,7 +116,12 @@
 
         .dropDown-description {
             font-size: 13px;
+            width: 100%;
         }
+    }
+
+    .dropDown-description {
+        width: 100%;
     }
 
     .DropDownContainer .dropDown,
